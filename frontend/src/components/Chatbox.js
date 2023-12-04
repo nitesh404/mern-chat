@@ -2,6 +2,8 @@ import { Box } from "@chakra-ui/layout";
 import "./styles.css";
 import SingleChat from "./SingleChat";
 import { ChatState } from "../Context/ChatProvider";
+import backgroundImg from './background.jpg';
+
 
 const Chatbox = ({ fetchAgain, setFetchAgain }) => {
   const { selectedChat } = ChatState();
@@ -12,7 +14,8 @@ const Chatbox = ({ fetchAgain, setFetchAgain }) => {
       alignItems="center"
       flexDir="column"
       p={3}
-      bg="white"
+       backgroundImage={`url(${backgroundImg})`} // Set the image as background
+      backgroundSize="cover"
       w={{ base: "100%", md: "68%" }}
       borderRadius="lg"
       borderWidth="1px"
